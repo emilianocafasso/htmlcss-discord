@@ -46,11 +46,12 @@ body {
 .align-txt-center {
     text-align: center;
 }
-
-.flex-dir-rowrev {
+.row-reverse {
     flex-direction: row-reverse;
 }
-
+.column {
+    flex-direction: column;
+}
 .list-unstyled {
     list-style: none;
 }
@@ -106,7 +107,6 @@ a {
 
 .small {
     width: 65%;
-    flex-direction: column;
     align-items: center;
 }
 

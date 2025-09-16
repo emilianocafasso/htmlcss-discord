@@ -64,27 +64,37 @@ body {
 /* font sizes */
 
 nav {
-    font-size: x-small;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 p {
-    font-size: small;
     line-height: 1.5rem;
 }
 
 h1 {
-    font-size: xx-large;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+ul {
+    padding-left: 0;
 }
 
 /* colors */
 :root {
-  --dis-white: #ffffff;
-  --dis-dark: #23272a;
-  --dis-light: #f6f6f6;
-  --dis-primary: #3161e0;
-  --dis-secondary: #7289da;
-  --dis-secondary-light: #8ea1e1;
+    --dis-white: #ffffff;
+    --dis-dark: #23272a;
+    --dis-light: #f6f6f6;
+    --dis-primary: #3161e0;
+    --dis-secondary: #7289da;
+    --dis-secondary-light: #8ea1e1;
 }
+
 .bg-light {
     background-color: var(--dis-light);
 }
@@ -96,7 +106,7 @@ header {
     padding: 0.5rem 0;
     margin: 0;
     height: 3rem;
-    background-color: rgba(37, 94, 233, 255);
+    background-color: var(--dis-primary);
 }
 
 nav ul {
@@ -104,9 +114,16 @@ nav ul {
     gap: 20px;
 
 }
+
 a {
+    color: var(--dis-white);
     text-align: center;
     text-decoration: none;
+    font-size: 0.9rem;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .container {
@@ -114,6 +131,7 @@ a {
     max-width: 1200px;
     width: 80%;
 }
+
 .container-sm {
     margin: 0 auto;
     width: 65%;
@@ -125,12 +143,23 @@ section {
 }
 
 .jumbotron {
-    justify-content: center;
-    background-color: royalblue;
-    height: 240px;
     background-image: url(./img/jumbo.png);
+    background-position: top;
+    color: var(--dis-white);
     background-size: cover;
     text-align: center;
+
+    .container-sm {
+        padding: 6rem 0;
+    }
+
+    p.lead {
+        font-size: 1.15rem;
+        padding: 1.5rem 0;
+    }
+    h1 {
+        font-size: 3rem;
+    }
 }
 
 img {
@@ -147,7 +176,7 @@ img {
 
 h1 {
     margin: 0;
-    width: 80%;
+    width: 100%;
 }
 
 .w-55 {
@@ -166,13 +195,25 @@ h1 {
     border-radius: 20px;
     padding: 1% 2%;
 }
+
+.btn-lg {
+    padding: 0.75rem 1rem;
+    border-radius: 1.5rem;
+}
+
 .btn-dark {
     background-color: var(--dis-dark);
     color: var(--dis-white);
 }
+
 .btn-light {
     background-color: var(--dis-white);
     color: var(--dis-dark)
+}
+
+.btn-secondary {
+    background-color: var(--dis-secondary);
+    color: var(--dis-white);
 }
 
 .jumbobuttons {
@@ -187,5 +228,39 @@ h1 {
 /* footer */
 
 footer {
-    background-color: rgba(35,39,42,255);
+    background-color: rgba(35, 39, 42, 255);
+}
+
+.languages {
+    gap: 0.5rem;
+    align-items: center;
+    color: var(--dis-white);
+}
+
+footer>.container {
+    gap: 1rem;
+}
+
+footer>.container>div.company {
+    width: 30%;
+}
+
+footer>.container>div.item {
+    flex-grow: 1;
+}
+
+header {
+    position: sticky;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.logo img {
+    display: block;
+}
+h3,h4 {
+    color: var(--dis-secondary-light);
+    margin-bottom: 1rem;
 }

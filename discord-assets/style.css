@@ -157,6 +157,7 @@ section {
         font-size: 1.15rem;
         padding: 1.5rem 0;
     }
+
     h1 {
         font-size: 3rem;
     }
@@ -260,7 +261,9 @@ header {
 .logo img {
     display: block;
 }
-h3,h4 {
+
+h3,
+h4 {
     color: var(--dis-secondary-light);
     margin-bottom: 1rem;
 }

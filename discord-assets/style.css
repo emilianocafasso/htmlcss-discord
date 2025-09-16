@@ -1,8 +1,9 @@
 /* debug - common */
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
+    min-width: 1200px;
 }
 
 .debug {
@@ -22,7 +23,7 @@ body {
 
     section {
         background-color: purple;
-        height: 350px;
+        /* height: 350px; */
     }
 
     footer {
@@ -46,12 +47,15 @@ body {
 .align-txt-center {
     text-align: center;
 }
+
 .row-reverse {
     flex-direction: row-reverse;
 }
+
 .column {
     flex-direction: column;
 }
+
 .list-unstyled {
     list-style: none;
 }
@@ -65,6 +69,7 @@ nav {
 
 p {
     font-size: small;
+    line-height: 1.5rem;
 }
 
 h1 {
@@ -72,13 +77,19 @@ h1 {
 }
 
 /* colors */
-.white {
-    color: white;
+:root {
+  --dis-white: #ffffff;
+  --dis-dark: #23272a;
+  --dis-light: #f6f6f6;
+  --dis-primary: #3161e0;
+  --dis-secondary: #7289da;
+  --dis-secondary-light: #8ea1e1;
+}
+.bg-light {
+    background-color: var(--dis-light);
 }
 
-.black {
-    color: black;
-}
+
 
 /* header */
 header {
@@ -93,8 +104,8 @@ nav ul {
     gap: 20px;
 
 }
-
 a {
+    text-align: center;
     text-decoration: none;
 }
 
@@ -102,15 +113,17 @@ a {
     margin: 0 auto;
     max-width: 1200px;
     width: 80%;
-    height: 100%;
 }
-
-.small {
+.container-sm {
+    margin: 0 auto;
     width: 65%;
-    align-items: center;
 }
 
 /* main */
+section {
+    padding: 5rem 0;
+}
+
 .jumbotron {
     justify-content: center;
     background-color: royalblue;
@@ -123,6 +136,13 @@ a {
 img {
     max-width: 100%;
     max-height: 100%;
+}
+
+.stars {
+    background-image: url(./img/stars.svg);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: 50% 1%;
 }
 
 h1 {
@@ -140,19 +160,19 @@ h1 {
     height: 100%;
 }
 
-section {
-    padding: 3rem 0;
-}
-
 /* buttons */
-.oval-btn {
-    border-block-style: unset;
+.btn {
+    display: inline-block;
     border-radius: 20px;
+    padding: 1% 2%;
 }
-
-#login {
-    font-size: x-small;
-    padding: 0.5% 2%;
+.btn-dark {
+    background-color: var(--dis-dark);
+    color: var(--dis-white);
+}
+.btn-light {
+    background-color: var(--dis-white);
+    color: var(--dis-dark)
 }
 
 .jumbobuttons {
@@ -162,9 +182,10 @@ section {
     padding: 1% 2%;
 }
 
-#open-on-browser {
-    background-color: rgba(35, 39, 42, 255);
-    padding: 1% 2%;
-}
-
 /* /buttons */
+
+/* footer */
+
+footer {
+    background-color: rgba(35,39,42,255);
+}
